@@ -9,7 +9,7 @@ export const ListQuestions = ({
 }) => {
   return (
     <div>
-      <div className="flex justify-center gap-5 m-15 cursor-pointer">
+      <div className="flex flex-wrap justify-around gap-5 m-15 cursor-pointer">
         {questions.map((question) => (
           <div
             key={question.id}
