@@ -1,0 +1,53 @@
+import { useState } from "react";
+
+export const ListRappers = ({ rappers, isModDel, setIsModDel, removedRapper, setRemovedRapper }) => {
+  const [hoveredId, setHoveredId] = useState(null);
+
+  console.log(removedRapper);
+
+  return (
+    <div className="flex justify-center items-center flex-wrap gap-6">
+      {rappers.map((rapper) => {
+        const isRemoved = removedRapper.includes(rapper.id);
+
+        return (
+          <div
+            key={rapper.id}
+            className={`${
+              isRemoved ? "rapper-removed" : "card"
+            } relative cursor-pointer group`}
+            onMouseEnter={() => setHoveredId(rapper.id)}
+            onMouseLeave={() => setHoveredId(null)}
+          >
+            {isModDel && hoveredId === rapper.id && (
+              <div className="absolute inset-0 bg-red-300/20 backdrop-blur-[2px] rounded-2xl z-30 flex items-center justify-center transition-opacity duration-300">
+                <button
+                  className="btn-red"
+                  onClick={() => {
+                    setRemovedRapper(
+                      (prev) =>
+                        isRemoved
+                          ? prev.filter((elem) => elem !== rapper.id) // se è già rimosso, lo tolgo
+                          : [...prev, rapper.id] // altrimenti lo aggiungo
+                    );
+                  }}
+                >
+                  {isRemoved ? "Aggiungi" : "Elimina"}
+                </button>
+              </div>
+            )}
+
+            <div className="relative z-20 flex flex-col items-center justify-center">
+              <div className="rapper-container mb-2">
+                <img src={rapper.img} alt={rapper.name} />
+              </div>
+              <h3 className="rapper-name text-white font-bold text-lg tracking-wide">
+                {rapper.name}
+              </h3>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
