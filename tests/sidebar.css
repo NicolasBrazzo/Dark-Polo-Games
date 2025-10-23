@@ -1,0 +1,109 @@
+@import "/commonsCss/index.css";
+
+/* Stile generale per il body */
+.sidebar-container-main {
+  display: flex;
+  height: 100vh;
+  background-color: #f8f8f8;
+  position: fixed;
+  top: 0;
+  left: -500px; /* Inizialmente nascosta a sinistra */
+  transition: left 0.3s ease; /* Animazione smooth */
+  z-index: 1000; /* Assicura che sia sopra gli altri elementi */
+}
+
+.close-sidebar {
+  border: 1px solid red;
+  z-index: 50;
+  color: white;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+
+/* Aside fisso a sinistra */
+.sidebar-component {
+  width: 250px; /* Larghezza della sidebar */
+  height: 100%; /* Altezza totale */
+  color: white;
+  background-color: var(--secondary);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 20px 0 ;
+}
+
+/* Stile della lista */
+.sidebar-component ul {
+  list-style: none; /* Rimuove i puntini */
+}
+
+/* Stile dei link nel menu */
+.sidebar-component ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.sidebar-component li {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Hover sui link */
+.sidebar-component ul li a:hover {
+  background-color: var(--primary); /* Rosso */
+}
+
+
+/* Nel sidebar.css */
+
+.sidebar-header-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: white;
+  z-index: 999; /* Sotto il pulsante (1001) ma sopra il contenuto */
+  box-shadow: 0 10px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 12px;
+  left: 8px;
+  z-index: 1001;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-toggle-btn:hover {
+  opacity: 0.8;
+}
+
+.sidebar-toggle-icon {
+  width: 24px;
+  height: 24px;
+  color: #333;
+  transition: color 0.3s ease; /* Solo transizione del colore */
+}
+
+/* Cambia colore icona quando sidebar aperta */
+.sidebar-container-main.open .sidebar-toggle-icon {
+  color: white;
+}

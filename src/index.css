@@ -204,7 +204,6 @@ body {
 .card-questions-used {
   @apply p-3 transition-all duration-300;
   border-radius: var(--card-radius);
-  border: 1px solid rgba(255, 255, 255, 0.493);
   background: linear-gradient(180deg, rgba(169, 3, 3, 0.689), rgb(95, 0, 0));
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }

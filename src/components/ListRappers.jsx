@@ -1,13 +1,30 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
-export const ListRappers = ({ rappers, isModDel, setIsModDel, removedRapper, setRemovedRapper }) => {
+export const ListRappers = ({
+  rappers,
+  isModDel,
+  setIsModDel,
+  removedRapper,
+  setRemovedRapper,
+}) => {
   const [hoveredId, setHoveredId] = useState(null);
 
   console.log(removedRapper);
 
+  const max = 20;
+
+  const randomRappers = useMemo(() => {
+    const shuffled = [...rappers];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled.slice(0, max);
+  }, [rappers, max]);
+
   return (
     <div className="flex justify-center items-center flex-wrap gap-6">
-      {rappers.map((rapper) => {
+      {randomRappers.map((rapper) => {
         const isRemoved = removedRapper.includes(rapper.id);
 
         return (

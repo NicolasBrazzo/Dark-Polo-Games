@@ -4,17 +4,16 @@ import { ListRappers } from "../components/ListRappers";
 import { RAPPERS } from "../data/rappers";
 import { QUESTIONS } from "../data/questions";
 import { Sidebar } from "../components/Sidebar";
-import { Menu, X } from "lucide-react";
 
 export const IndovinaChiRapper = () => {
+  const [rapperSelected, setRapperSelected] = useState(
+    () => RAPPERS[Math.floor(Math.random() * RAPPERS.length)]
+  );
   // Id domanda selezionata
   const [selectedQuestion, setSelectedQuestion] = useState(null);
   const [responseToQuestion, setResponseToQuestion] = useState("");
   const [isModDel, setIsModDel] = useState(false);
   const [usedQuestions, setUsedQuestions] = useState([]);
-  const [rapperSelected, setRapperSelected] = useState(
-    () => RAPPERS[Math.floor(Math.random() * RAPPERS.length)]
-  );
   const [removedRapper, setRemovedRapper] = useState([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -45,14 +44,7 @@ export const IndovinaChiRapper = () => {
 
   return (
     <div>
-      <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-        {isSidebarOpen ? <X/> : <Menu/>}
-      </button>
-      <Sidebar
-        gameId="indovina-chi"
-        open={isSidebarOpen}
-        setOpening={setIsSidebarOpen}
-      />
+      <Sidebar open={isSidebarOpen} setOpening={setIsSidebarOpen} />
       <div>
         <ListRappers
           rappers={RAPPERS}

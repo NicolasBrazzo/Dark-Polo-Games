@@ -1,25 +1,24 @@
+import { ArrowDown, ArrowUp, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { GAMES } from "../data/gamesData";
+import { useEffect, useState } from "react";
 
-export const Sidebar = ({ gameId, open, setOpening }) => {
-  const game = GAMES[gameId];
+export const Sidebar = ({ open, setOpening }) => {
+  const [sectionOpen, setSectinOpen] = useState(null);
+  const game = GAMES[sectionOpen];
 
-  // se non trovi il gioco, mostriamo un fallback ma teniamo comunque la sidebar montata
+  useEffect(() => {
+    console.log(sectionOpen);
+  }, [sectionOpen]);
+
   const content = game ? (
     <>
       <div className="flex justify-between items-start gap-4">
         <div>
-          <h2 className="text-xl font-bold text-white">{game.title}</h2>
           {game.subtitle && (
             <p className="text-sm text-gray-300 mt-1">{game.subtitle}</p>
           )}
         </div>
-        <button
-          aria-label="Chiudi sidebar"
-          onClick={() => setOpening(false)}
-          className="ml-2 p-2 rounded-md hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400"
-        >
-          ✕
-        </button>
       </div>
 
       {game.howTo && (
@@ -47,6 +46,16 @@ export const Sidebar = ({ gameId, open, setOpening }) => {
           </ul>
         </section>
       )}
+
+      {game.route && (
+        <div>
+          {game.route.map((r, i) => (
+            <Link to={r}>
+              <div className="btn-secondary mt-4">Gioca</div>
+            </Link>
+          ))}
+        </div>
+      )}
     </>
   ) : (
     <div className="text-gray-300">Gioco non trovato</div>
@@ -54,10 +63,15 @@ export const Sidebar = ({ gameId, open, setOpening }) => {
 
   return (
     <>
+      <button onClick={() => setOpening(!open)} className="z-50 m-5 relative">
+        <Menu />
+      </button>
       {/* overlay */}
       <div
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 z-40 ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 z-20 ${
+          open
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setOpening(false)}
         aria-hidden={!open}
@@ -72,22 +86,41 @@ export const Sidebar = ({ gameId, open, setOpening }) => {
         aria-modal={open}
         aria-hidden={!open}
       >
+        <button
+          aria-label="Chiudi sidebar"
+          onClick={() => setOpening(false)}
+          className="ml-2 p-2 rounded-md hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400"
+        >
+          ✕
+        </button>
         <div className="h-full overflow-y-auto pr-2">
-          {content}
-
-          {/* footer area: restart / extra info */}
-          <div className="mt-8 border-t border-gray-800 pt-4">
-            <button
+          {/* {content} */}
+          {Object.entries(GAMES).map(([key, game]) => (
+            <div
+              key={key}
+              className="border border-slate-300/30 my-3 p-5 transition duration-300"
               onClick={() => {
-                // reset game logic lato parent: chiama la callback di chiusura
-                // qui chiudiamo semplicemente
-                setOpening(false);
+                if (sectionOpen === key) {
+                  setSectinOpen(null);
+                } else {
+                  setSectinOpen(key);
+                }
               }}
-              className="btn-primary py-2 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-semibold"
             >
-              Chiudi
-            </button>
-          </div>
+              <div
+                key={key}
+                className="flex justify-between items-center cursor-pointer"
+              >
+                <h2
+                  className={`${sectionOpen === key && "font-bold text-white"}`}
+                >
+                  {game.title}
+                </h2>
+                {sectionOpen === key ? <ArrowUp /> : <ArrowDown />}
+              </div>
+              {sectionOpen === key && <div>{content}</div>}
+            </div>
+          ))}
         </div>
       </aside>
     </>

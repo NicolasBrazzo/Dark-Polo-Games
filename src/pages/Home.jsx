@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import "../index.css";
 import { Navbar } from "../components/Navbar";
+import "../index.css";
+import { GAMES } from "../data/gamesData";
 
 export const Home = () => {
   return (
@@ -9,6 +10,8 @@ export const Home = () => {
       <div className="moving-bg" aria-hidden="true"></div>
 
       <Navbar />
+
+      
       <div className="flex flex-col items-center">
         <h1 className="neon-title">Dark Polo Games</h1>
         <p className="text-normal">
@@ -22,7 +25,7 @@ export const Home = () => {
           Giochi Attualmente disponibili
         </h2>
         <div className="flex justify-center items-center gap-5">
-          <div className="card">
+          <div className="card max-w-[400px]">
             <h2 className="neon-subtitle">Indovina chi Rapper</h2>
             <p className="text-normal">
               Fai delle domande al sistema per indovinare chi è il rapper da
@@ -34,7 +37,6 @@ export const Home = () => {
           </div>
         </div>
       </div>
-
 
       <div id="info"></div>
       <div id="madeby"></div>
