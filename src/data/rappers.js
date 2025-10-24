@@ -556,7 +556,7 @@ export const RAPPERS = [
   {
     id: 23,
     name: "Clementino",
-    img: "https://i.scdn.co/image/ab6761610000e5eb05859a430915e5d817bb4f7d",
+    img: "https://i.scdn.co/image/ab6761610000e5ebc6a8d56f10414812d6a50753",
     under30: false,
     newscene: false,
     sansiro: true,
@@ -581,7 +581,7 @@ export const RAPPERS = [
   {
     id: 24,
     name: "Club Dogo",
-    img: "https://i.scdn.co/image/ab6761610000e5eb3e6b6b4b3b3b3b3b3b3b3b3b",
+    img: "https://i.scdn.co/image/ab6761610000e5eb7ea1c19874e1470cb83c4640",
     under30: false,
     newscene: false,
     sansiro: true,
@@ -606,7 +606,7 @@ export const RAPPERS = [
   {
     id: 25,
     name: "Kid Yugi",
-    img: "https://i.scdn.co/image/ab6761610000e5eb7f8f8f8f8f8f8f8f8f8f8f8f",
+    img: "https://i.scdn.co/image/ab6761610000e5eb5a8302b17dee9e56ad89f199",
     under30: false,
     newscene: false,
     sansiro: true,
@@ -631,7 +631,7 @@ export const RAPPERS = [
   {
     id: 26,
     name: "Fedez",
-    img: "https://i.scdn.co/image/ab6761610000e5eb9d9d9d9d9d9d9d9d9d9d9d9d",
+    img: "https://i.scdn.co/image/ab6761610000e5ebc26d72b8d6311e2ef58d58bb",
     under30: false,
     newscene: false,
     sansiro: true,
@@ -656,7 +656,7 @@ export const RAPPERS = [
   {
     id: 27,
     name: "Fred De Palma",
-    img: "https://i.scdn.co/image/ab6761610000e5eb1a1a1a1a1a1a1a1a1a1a1a1a",
+    img: "https://i.scdn.co/image/ab6761610000e5eba74e8b6f0187daad4e6b4e1e",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -681,7 +681,7 @@ export const RAPPERS = [
   {
     id: 28,
     name: "Gemitaiz",
-    img: "https://i.scdn.co/image/ab6761610000e5eb2b2b2b2b2b2b2b2b2b2b2b2b",
+    img: "https://i.scdn.co/image/ab6761610000e5eb0843266e4d10c66e41f7b9dc",
     under30: false,
     newscene: false,
     sansiro: true,
@@ -706,7 +706,7 @@ export const RAPPERS = [
   {
     id: 29,
     name: "Luchè",
-    img: "https://i.scdn.co/image/ab6761610000e5eb3c3c3c3c3c3c3c3c3c3c3c3c",
+    img: "https://i.scdn.co/image/ab6761610000e5ebba678d4998e5407380b0a688",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -731,7 +731,7 @@ export const RAPPERS = [
   {
     id: 30,
     name: "Mondo Marcio",
-    img: "https://i.scdn.co/image/ab6761610000e5eb4d4d4d4d4d4d4d4d4d4d4d4d",
+    img: "",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -756,7 +756,7 @@ export const RAPPERS = [
   {
     id: 31,
     name: "Noyz Narcos",
-    img: "https://i.scdn.co/image/ab6761610000e5eb5e5e5e5e5e5e5e5e5e5e5e5e",
+    img: "https://i.scdn.co/image/ab6761610000e5eb4180158c8a25e7c85f7e3e1f",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -781,7 +781,7 @@ export const RAPPERS = [
   {
     id: 32,
     name: "Rancore",
-    img: "https://i.scdn.co/image/ab6761610000e5eb6f6f6f6f6f6f6f6f6f6f6f6f",
+    img: "",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -806,7 +806,7 @@ export const RAPPERS = [
   {
     id: 33,
     name: "Shade",
-    img: "https://i.scdn.co/image/ab6761610000e5eb7g7g7g7g7g7g7g7g7g7g7g7g",
+    img: "https://i.scdn.co/image/ab6761610000e5ebbb5d6266f7595c0d739c0fe5",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -831,7 +831,7 @@ export const RAPPERS = [
   {
     id: 34,
     name: "Simba La Rue",
-    img: "https://i.scdn.co/image/ab6761610000e5eb8h8h8h8h8h8h8h8h8h8h8h8h",
+    img: "https://i.scdn.co/image/ab6761610000e5eb09094dfccb6bcb4a6717a044",
     under30: true,
     newscene: true,
     sansiro: false,
@@ -856,7 +856,7 @@ export const RAPPERS = [
   {
     id: 35,
     name: "Niky Savage",
-    img: "https://i.scdn.co/image/ab6761610000e5eb9i9i9i9i9i9i9i9i9i9i9i9i",
+    img: "https://i.scdn.co/image/ab6761610000e5eba6a7ef971762614417033c31",
     under30: true,
     newscene: true,
     sansiro: false,
@@ -881,7 +881,7 @@ export const RAPPERS = [
   {
     id: 36,
     name: "Artie 5ive",
-    img: "https://i.scdn.co/image/ab6761610000e5eb0j0j0j0j0j0j0j0j0j0j0j0j",
+    img: "https://i.scdn.co/image/ab6761610000e5eb585bcb7c5c38fa19f9e9cbde",
     under30: true,
     newscene: true,
     sansiro: false,
@@ -906,7 +906,7 @@ export const RAPPERS = [
   {
     id: 37,
     name: "Pyrex",
-    img: "https://i.scdn.co/image/ab6761610000e5eb1k1k1k1k1k1k1k1k1k1k1k1k",
+    img: "https://i.scdn.co/image/ab6761610000e5eb96753f0b2fb6464cf1b40f30",
     under30: true,
     newscene: true,
     sansiro: false,
@@ -931,7 +931,7 @@ export const RAPPERS = [
   {
     id: 38,
     name: "Emis Killa",
-    img: "https://i.scdn.co/image/ab6761610000e5eb2l2l2l2l2l2l2l2l2l2l2l2l",
+    img: "https://i.scdn.co/image/ab6761610000e5eb1f22144b6825d322cbe4d059",
     under30: false,
     newscene: false,
     sansiro: true,
@@ -956,7 +956,7 @@ export const RAPPERS = [
   {
     id: 39,
     name: "Madman",
-    img: "https://i.scdn.co/image/ab6761610000e5eb3m3m3m3m3m3m3m3m3m3m3m3m",
+    img: "https://i.scdn.co/image/ab6761610000e5eb344429165fa08532eb9a635a",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -980,8 +980,8 @@ export const RAPPERS = [
   },
   {
     id: 40,
-    name: "Vale Pain",
-    img: "https://i.scdn.co/image/ab6761610000e5eb4n4n4n4n4n4n4n4n4n4n4n4n",
+    name: "Papa V",
+    img: "",
     under30: true,
     newscene: true,
     sansiro: false,
@@ -1005,8 +1005,8 @@ export const RAPPERS = [
   },
   {
     id: 41,
-    name: "Guè Pequeno",
-    img: "https://i.scdn.co/image/ab6761610000e5eb5o5o5o5o5o5o5o5o5o5o5o5o",
+    name: "Nerissima Serpe",
+    img: "",
     under30: false,
     newscene: false,
     sansiro: true,
@@ -1031,7 +1031,7 @@ export const RAPPERS = [
   {
     id: 42,
     name: "Rhove",
-    img: "https://i.scdn.co/image/ab6761610000e5eb6p6p6p6p6p6p6p6p6p6p6p6p",
+    img: "https://i.scdn.co/image/ab6761610000e5ebff93f9fc94efb4c5cc8f2e34",
     under30: true,
     newscene: true,
     sansiro: false,
@@ -1056,7 +1056,7 @@ export const RAPPERS = [
   {
     id: 43,
     name: "MamboLosco",
-    img: "https://i.scdn.co/image/ab6761610000e5eb7q7q7q7q7q7q7q7q7q7q7q7q",
+    img: "https://i.scdn.co/image/ab6761610000e5eb9cd1e0d4c4d51ad568440b09",
     under30: true,
     newscene: true,
     sansiro: false,
@@ -1080,8 +1080,8 @@ export const RAPPERS = [
   },
   {
     id: 44,
-    name: "Blanco",
-    img: "https://i.scdn.co/image/ab6761610000e5eb8r8r8r8r8r8r8r8r8r8r8r8r",
+    name: "22 Simba",
+    img: "",
     under30: true,
     newscene: false,
     sansiro: true,
@@ -1106,7 +1106,7 @@ export const RAPPERS = [
   {
     id: 45,
     name: "Side Baby",
-    img: "https://i.scdn.co/image/ab6761610000e5eb9s9s9s9s9s9s9s9s9s9s9s9s",
+    img: "https://i.scdn.co/image/ab6761610000e5eb6b6b4eb857aba191a3c996e7",
     under30: true,
     newscene: true,
     sansiro: false,
@@ -1131,7 +1131,7 @@ export const RAPPERS = [
   {
     id: 46,
     name: "Nayt",
-    img: "https://i.scdn.co/image/ab6761610000e5eb0t0t0t0t0t0t0t0t0t0t0t0t",
+    img: "https://i.scdn.co/image/ab6761610000e5eb786995f4caea9069193b4463",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -1156,7 +1156,7 @@ export const RAPPERS = [
   {
     id: 47,
     name: "Nitro",
-    img: "https://i.scdn.co/image/ab6761610000e5eb1u1u1u1u1u1u1u1u1u1u1u1u",
+    img: "https://i.scdn.co/image/ab6761610000e5eb4983f62e26f92e45fce03c81",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -1180,8 +1180,8 @@ export const RAPPERS = [
   },
   {
     id: 48,
-    name: "Mahmood",
-    img: "https://i.scdn.co/image/ab6761610000e5eb2v2v2v2v2v2v2v2v2v2v2v2v",
+    name: "Fritu",
+    img: "",
     under30: false,
     newscene: false,
     sansiro: true,
@@ -1206,7 +1206,7 @@ export const RAPPERS = [
   {
     id: 49,
     name: "Sick Luke",
-    img: "https://i.scdn.co/image/ab6761610000e5eb3w3w3w3w3w3w3w3w3w3w3w3w",
+    img: "https://i.scdn.co/image/ab6761610000e5eb8c114d5dac68f7764f9f36b4",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -1230,8 +1230,33 @@ export const RAPPERS = [
   },
   {
     id: 50,
-    name: "Taxi B",
-    img: "https://i.scdn.co/image/ab6761610000e5eb4x4x4x4x4x4x4x4x4x4x4x4x",
+    name: "Young Hash",
+    img: "https://i.scdn.co/image/ab6761610000e5eb54eb5d88ec3e5d501279e459",
+    under30: true,
+    newscene: true,
+    sansiro: false,
+    autotune: true,
+    major: false,
+    producer: false,
+    freestyle: false,
+    feat: true,
+    popcollab: false,
+    dialetto: true,
+    drill: false,
+    hit_estive: false,
+    gruppo: false,
+    debutto_pre2015: false,
+    provenienza_nord: false,
+    provenienza_centro: false,
+    provenienza_sud: true,
+    rapper_singer: false,
+    label_indipendente: false,
+    voice_distinctive: false,
+  },
+    {
+    id: 51,
+    name: "Melons",
+    img: "https://i.scdn.co/image/ab6761610000e5eb340ab4af0d5264450904c8d9",
     under30: true,
     newscene: true,
     sansiro: false,
@@ -1249,8 +1274,8 @@ export const RAPPERS = [
     provenienza_nord: true,
     provenienza_centro: false,
     provenienza_sud: false,
-    rapper_singer: true,
-    label_indipendente: true,
-    voice_distinctive: false,
+    rapper_singer: false,
+    label_indipendente: false,
+    voice_distinctive: true,
   },
 ];

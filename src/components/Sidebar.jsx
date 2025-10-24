@@ -47,13 +47,17 @@ export const Sidebar = ({ open, setOpening }) => {
         </section>
       )}
 
-      {game.route && (
-        <div>
-          {game.route.map((r, i) => (
-            <Link to={r}>
-              <div className="btn-secondary mt-4">Gioca</div>
-            </Link>
-          ))}
+      {(game.route || game.rotue) && (
+        <div className="mt-6">
+          <Link
+            to={
+              Array.isArray(game.route || game.rotue)
+                ? (game.route || game.rotue)[0]
+                : game.route || game.rotue
+            }
+          >
+            <button className="btn-secondary mt-4">Gioca</button>
+          </Link>
         </div>
       )}
     </>

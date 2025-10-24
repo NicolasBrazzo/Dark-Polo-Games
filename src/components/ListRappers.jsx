@@ -3,13 +3,10 @@ import { useMemo, useState } from "react";
 export const ListRappers = ({
   rappers,
   isModDel,
-  setIsModDel,
   removedRapper,
   setRemovedRapper,
 }) => {
   const [hoveredId, setHoveredId] = useState(null);
-
-  console.log(removedRapper);
 
   const max = 20;
 
@@ -23,7 +20,7 @@ export const ListRappers = ({
   }, [rappers, max]);
 
   return (
-    <div className="flex justify-center items-center flex-wrap gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-9 mx-5 gap-2">
       {randomRappers.map((rapper) => {
         const isRemoved = removedRapper.includes(rapper.id);
 
