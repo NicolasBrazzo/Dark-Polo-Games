@@ -1,0 +1,10 @@
+[] - Adeguare il funzionamento a mobile
+> https://chatgpt.com/c/68fba19f-42a4-8329-8587-8e04632207d6
+
+[] - Studiare lo UseMemo che usi in ListRappers.jsx
+[X] - Inserire il limite di 10 domande
+[] - Finire le immagini dei rapper 
+[X] - Spostare il bottone, magari vicino alle risposte (rivisionare la UX)
+
+
+

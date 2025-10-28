@@ -11,7 +11,6 @@ export const Home = () => {
 
       <Navbar />
 
-      
       <div className="flex flex-col items-center">
         <h1 className="neon-title">Dark Polo Games</h1>
         <p className="text-normal">
@@ -24,17 +23,17 @@ export const Home = () => {
         <h2 className="text-center mt-10 mb-5">
           Giochi Attualmente disponibili
         </h2>
-        <div className="flex justify-center items-center gap-5">
-          <div className="card max-w-[400px]">
-            <h2 className="neon-subtitle">Indovina chi Rapper</h2>
-            <p className="text-normal">
-              Fai delle domande al sistema per indovinare chi è il rapper da
-              indovinare
-            </p>
-            <Link to="/indovinaChiRapper">
-              <button className="btn-secondary">Gioca ora</button>
-            </Link>
-          </div>
+        
+        <div className="flex flex-wrap justify-center items-center gap-5">
+          {Object.entries(GAMES).map(([key, game]) => (
+            <div key={key} className="card max-w-[400px]">
+              <h2 className="neon-subtitle">{game.title}</h2>
+              <p className="text-normal">{game.subtitle}</p>
+              <Link to={game.route}>
+                <button className="btn-secondary">Gioca ora</button>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
 

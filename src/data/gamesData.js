@@ -2,7 +2,7 @@ export const GAMES = {
   "indovina-chi": {
     title: "Indovina chi Rapper",
     subtitle: "Questo gioco funziona esattamente come indovina chi, solo con i Rapper",
-    rotue: "/indovinaChiRapper",
+    route: "/indovinaChiRapper",
     rules: [
       "Puoi escludere i rapper solo dopo aver visto la risposta",
       "Non puoi rifare la stessa domanda più di una volta",
@@ -19,7 +19,7 @@ export const GAMES = {
   "indovina-anno-album": {
     title: "Indovina Anno dell'album",
     subtitle: "Metti alla prova la tua conoscenza della scena italiana indovinando l'anno di uscita degli album",
-    rotue: "/",
+    route: "/",
     rules: [
       "SHOUT"
     ],

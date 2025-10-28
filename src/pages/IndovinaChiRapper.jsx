@@ -11,9 +11,9 @@ export const IndovinaChiRapper = () => {
   );
   // Id domanda selezionata
   const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const [usedQuestions, setUsedQuestions] = useState([]);
   const [responseToQuestion, setResponseToQuestion] = useState("");
   const [isModDel, setIsModDel] = useState(false);
-  const [usedQuestions, setUsedQuestions] = useState([]);
   const [removedRapper, setRemovedRapper] = useState([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -44,7 +44,10 @@ export const IndovinaChiRapper = () => {
 
   return (
     <div>
-      <Sidebar open={isSidebarOpen} setOpening={setIsSidebarOpen} />
+      <div className="flex items-center">
+        <Sidebar open={isSidebarOpen} setOpening={setIsSidebarOpen} />
+        <h1 className="neon-subtitle underline">Indovina chi Rapper</h1>
+      </div>
       <div>
         <ListRappers
           rappers={RAPPERS}
@@ -53,6 +56,11 @@ export const IndovinaChiRapper = () => {
           removedRapper={removedRapper}
           setRemovedRapper={setRemovedRapper}
         />
+
+        <div className="card-utility w-fit m-10">
+          <p>Hai ancora {10 - usedQuestions.length} domande</p>
+        </div>
+
         {responseToQuestion && (
           <p className="neon-subtitle text-center m-20">
             Risposta: {responseToQuestion}

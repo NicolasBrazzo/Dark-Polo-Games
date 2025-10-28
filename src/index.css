@@ -53,6 +53,19 @@ body {
   }
 }
 
+@keyframes change_color_card {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 /* PANEL */
 .panel {
   background: linear-gradient(
@@ -75,15 +88,14 @@ body {
   line-height: 1;
   text-shadow: 0 0 8px rgba(255, 45, 149, 0.22),
     0 0 28px rgba(0, 224, 255, 0.06);
-  margin-bottom: 12px;
 }
 
 .neon-subtitle {
   font-family: "Bebas Neue", sans-serif;
   font-size: 22px;
   color: #e6eef8;
-  margin-bottom: 12px;
   text-shadow: 0 0 6px rgba(255, 45, 149, 0.12);
+  margin: 10px 0;
 }
 
 .link-nav {
@@ -147,6 +159,7 @@ body {
     rgba(255, 255, 255, 0.006)
   );
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  z-index: 10;
 }
 
 .rapper-removed {
@@ -211,6 +224,87 @@ body {
 .card-questions-used:hover {
   background: linear-gradient(180deg, rgba(169, 3, 3, 0.689), rgb(95, 0, 0));
 }
+
+
+
+
+
+
+
+
+
+
+/* base: nessuna animazione attiva di default */
+.card-utility {
+  @apply p-3 transition-all duration-500;
+  position: relative;       /* necessario per il ::before overlay */
+  isolation: isolate;       /* evita blend indesiderati con elementi esterni */
+  border-radius: var(--card-radius);
+  border: 2px solid rgba(255, 255, 255, 0.243);
+  background: linear-gradient(45deg, rgba(20,195,180,0.12), rgba(130,12,138,0.14));
+  background-size: 200% 200%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  will-change: transform, opacity;
+  transform: translateZ(0); /* aiuta il compositing su alcuni browser */
+}
+
+/* pseudo-element che farà la "dissolvenza di luce" */
+.card-utility::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 0;
+  /* gradiente leggermente più intenso dell'originale */
+  background: linear-gradient(135deg, rgba(20,195,180,0.24), rgba(130,12,138,0.22));
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 1200ms cubic-bezier(.22,.9,.3,1), transform 1200ms cubic-bezier(.22,.9,.3,1);
+  transform: scale(1);
+  will-change: opacity, transform;
+}
+
+/* contenuto della card (testo/immagine) deve restare sopra il pseudo-element */
+.card-utility > * {
+  position: relative;
+  z-index: 10;
+}
+
+/* hover desktop: scala la card e dissolve l'overlay */
+.card-utility:hover {
+  transform: scale(1.04);
+  transition-duration: 320ms; /* scala rapida e fluida */
+}
+
+.card-utility:hover::before {
+  opacity: 1;
+  transform: scale(1.02) rotate(1deg); /* lieve movimento per dare 'vita' */
+}
+
+/* classe JS: attiva lo stesso effetto via codice (tap su mobile) */
+.animate-changeColor::before {
+  opacity: 1;
+  transform: scale(1.02) rotate(1deg);
+}
+
+/* feedback touch immediato (micro-press) */
+.card-utility:active {
+  transform: scale(0.99);
+  transition-duration: 120ms;
+}
+
+/* fallback: se vuoi far sparire l'overlay velocemente */
+.card-utility.animate-changeColor.hide-fast::before {
+  transition-duration: 260ms;
+  opacity: 0;
+}
+
+
+
+
+
+
 /* RAPPER CONTAINER */
 .rapper-container {
   width: 120px;
