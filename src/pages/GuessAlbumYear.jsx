@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Sidebar } from "../components/Sidebar";
 import { ALBUMS } from "../data/albumYear";
 import { useState } from "react";
+import placeholderImg from "../assets/placeholderAlbum.jpeg";
 
 export const GuessAlbumYear = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -107,7 +108,12 @@ export const GuessAlbumYear = () => {
           <div className="text-center">
             <h2 className="sm:text-3xl text-xl font-bold m-2">{album.title}</h2>
             <div className="w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] mx-auto">
-              <img src={album.image} alt="" />
+              <img
+                src={album.image || placeholderImg}
+                alt={album.title ?? "cover"}
+                lang="lazy"
+                decoding="async"
+              />
             </div>
           </div>
 
@@ -128,7 +134,7 @@ export const GuessAlbumYear = () => {
             </div>
             <div className="flex justify-center items-center m-3">
               {album.options.map((option, key) => (
-                <div
+                <button
                   className={`${
                     choice === option
                       ? "btn-secondary-selected"
@@ -136,12 +142,12 @@ export const GuessAlbumYear = () => {
                   } text-2xl m-2 cursor-pointer`}
                   key={key}
                   onClick={() => {
-                    if(loading) return;
-                    setChoice(option)}
-                  }
+                    if (loading) return;
+                    setChoice(option);
+                  }}
                 >
                   {option}
-                </div>
+                </button>
               ))}
             </div>
 
