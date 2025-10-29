@@ -19,7 +19,7 @@ export const GAMES = {
   "indovina-anno-album": {
     title: "Indovina Anno dell'album",
     subtitle: "Metti alla prova la tua conoscenza della scena italiana indovinando l'anno di uscita degli album",
-    route: "/",
+    route: "/indovinaAlbumAnno",
     rules: [
       "SHOUT"
     ],

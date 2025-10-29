@@ -20,7 +20,7 @@ export const ListRappers = ({
   }, [rappers, max]);
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-9 mx-5 gap-2">
+    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-9 mx-5 gap-2">
       {randomRappers.map((rapper) => {
         const isRemoved = removedRapper.includes(rapper.id);
 
@@ -53,7 +53,7 @@ export const ListRappers = ({
 
             <div className="relative z-20 flex flex-col items-center justify-center">
               <div className="rapper-container mb-2">
-                <img src={rapper.img} alt={rapper.name} />
+                <img src={rapper.img} alt={rapper.name} className="" />
               </div>
               <h3 className="rapper-name text-white font-bold text-lg tracking-wide">
                 {rapper.name}

@@ -124,6 +124,7 @@ body {
 .btn-primary {
   @apply inline-flex items-center gap-3 px-4 py-2 rounded-lg font-bold text-black shadow-lg transition-transform duration-150;
   background: linear-gradient(90deg, var(--neon-magenta), var(--neon-cyan));
+  cursor: pointer;
 }
 .btn-primary:hover {
   transform: translateY(-3px);
@@ -134,6 +135,15 @@ body {
   background: transparent;
 }
 .btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 224, 255, 0.06);
+}
+
+.btn-secondary-selected {
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-md border border-white/10 text-white transition-all duration-150;
+  background: rgba(159, 159, 159, 0.53);
+}
+.btn-secondary-selected:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(0, 224, 255, 0.06);
 }
