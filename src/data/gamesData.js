@@ -24,7 +24,10 @@ export const GAMES = {
       "SHOUT"
     ],
     howTo: [
-      "IDK ancora"
+      "Leggi il nome dell'album",
+      "Fai la scelta dell'anno di quell'album",
+      "Selezione l'anno e premi su Verifica",
+      "Alla fine delle 20 domande avrai il tuo risultato"
     ],
   },
 };

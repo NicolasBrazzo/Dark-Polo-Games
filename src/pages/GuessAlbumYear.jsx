@@ -135,7 +135,10 @@ export const GuessAlbumYear = () => {
                       : "btn-secondary"
                   } text-2xl m-2 cursor-pointer`}
                   key={key}
-                  onClick={() => setChoice(option)}
+                  onClick={() => {
+                    if(loading) return;
+                    setChoice(option)}
+                  }
                 >
                   {option}
                 </div>

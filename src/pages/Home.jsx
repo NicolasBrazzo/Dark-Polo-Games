@@ -13,7 +13,7 @@ export const Home = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="neon-title">Dark Polo Games</h1>
-        <p className="text-normal">
+        <p className="text-normal text-center">
           Benvenuto nella piattaforma dove potrai giocare con i tuoi rapperz
           preferiti
         </p>

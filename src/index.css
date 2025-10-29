@@ -103,7 +103,6 @@ body {
   color: var(--neon-cyan);
   text-shadow: 0 0 8px rgba(255, 45, 149, 0.22),
     0 0 28px rgba(0, 224, 255, 0.06);
-  font-size: 20px;
   cursor: pointer;
 }
 

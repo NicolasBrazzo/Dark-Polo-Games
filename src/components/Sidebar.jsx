@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUp, Menu, X } from "lucide-react";
+import { ArrowDown, ArrowUp, Home, House, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GAMES } from "../data/gamesData";
 import { useEffect, useState } from "react";
@@ -98,11 +98,18 @@ export const Sidebar = ({ open, setOpening }) => {
           ✕
         </button>
         <div className="h-full overflow-y-auto pr-2">
+          <Link to={"/"}>
+            <div className="border flex items-center gap-3 border-slate-300/30 my-3 p-5 w-fit transition duration-300 hover:bg-slate-700 cursor-pointer">
+              <House /> <span>Torna alla Home</span>
+            </div>
+          </Link>
           {/* {content} */}
           {Object.entries(GAMES).map(([key, game]) => (
             <div
               key={key}
-              className="border border-slate-300/30 my-3 p-5 transition duration-300"
+              className={`${
+                sectionOpen !== key && "hover:bg-slate-700"
+              } border border-slate-300/30 my-3 p-5 transition duration-300`}
               onClick={() => {
                 if (sectionOpen === key) {
                   setSectinOpen(null);
