@@ -8,3 +8,26 @@
 
 
 
+🏆 10️⃣ “Top Chart Race”
+
+Tipo: Classifica / Ordina
+Descrizione: mostri 3 canzoni → devi ordinarle per numero di stream su Spotify.
+
+[ROCKSTAR, Piove, MILANO DEMONS]
+Ordine corretto → punteggio.
+
+Difficoltà: ⭐️⭐️⭐️⭐️
+Valore: ⭐️⭐️⭐️⭐️⭐️
+
+
+💰 6️⃣ “DPG Evolution – Timeline”
+
+Tipo: Year game (come GuessAlbumYear, ma solo DPG)
+Descrizione: metti in ordine gli album DPG dal primo all’ultimo.
+
+[Crack Musica, Twins, Trap Lovers, Dark Boys Club]
+Modalità: drag & drop o step-by-step guess.
+
+Difficoltà: ⭐️⭐️⭐️⭐️
+Valore: ⭐️⭐️⭐️⭐️
+Extra: potresti riutilizzare parte del codice di GuessAlbumYear.

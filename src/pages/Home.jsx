@@ -30,7 +30,7 @@ export const Home = () => {
               <h2 className="neon-subtitle">{game.title}</h2>
               <p className="text-normal">{game.subtitle}</p>
               <Link to={game.route}>
-                <button className="btn-secondary">Gioca ora</button>
+                <button className="btn-secondary" disabled={game.disabledButton}>Gioca ora</button>
               </Link>
             </div>
           ))}

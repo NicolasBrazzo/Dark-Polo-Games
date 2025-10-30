@@ -731,7 +731,7 @@ export const RAPPERS = [
   {
     id: 30,
     name: "Mondo Marcio",
-    img: "",
+    img: "https://i.scdn.co/image/ab6761610000e5eb793a2701e7f7c698c55f8fbf",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -781,7 +781,7 @@ export const RAPPERS = [
   {
     id: 32,
     name: "Rancore",
-    img: "",
+    img: "https://i.scdn.co/image/ab6761610000e5eb49a3d1cd160014efc5e6612c",
     under30: false,
     newscene: false,
     sansiro: false,
@@ -981,7 +981,7 @@ export const RAPPERS = [
   {
     id: 40,
     name: "Papa V",
-    img: "",
+    img: "https://i.scdn.co/image/ab6761610000e5eb2b0f79124f085551a984ecbe",
     under30: true,
     newscene: true,
     sansiro: false,
@@ -1006,7 +1006,7 @@ export const RAPPERS = [
   {
     id: 41,
     name: "Nerissima Serpe",
-    img: "",
+    img: "https://i.scdn.co/image/ab6761610000e5eb97a0f45ee0607e4430172d89",
     under30: false,
     newscene: false,
     sansiro: true,
@@ -1081,7 +1081,7 @@ export const RAPPERS = [
   {
     id: 44,
     name: "22 Simba",
-    img: "",
+    img: "https://i.scdn.co/image/ab6761610000e5ebceb31571aafe417e1811ab61",
     under30: true,
     newscene: false,
     sansiro: true,
@@ -1181,7 +1181,7 @@ export const RAPPERS = [
   {
     id: 48,
     name: "Fritu",
-    img: "",
+    img: "https://i.scdn.co/image/ab6761610000e5ebe036aa6219650d92d962688a",
     under30: false,
     newscene: false,
     sansiro: true,

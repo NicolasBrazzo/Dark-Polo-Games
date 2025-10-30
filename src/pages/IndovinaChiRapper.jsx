@@ -5,6 +5,8 @@ import { RAPPERS } from "../data/rappers";
 import { QUESTIONS } from "../data/questions";
 import { Sidebar } from "../components/Sidebar";
 
+const max = 20;
+
 export const IndovinaChiRapper = () => {
   const [rapperSelected, setRapperSelected] = useState(
     () => RAPPERS[Math.floor(Math.random() * RAPPERS.length)]
@@ -16,11 +18,15 @@ export const IndovinaChiRapper = () => {
   const [isModDel, setIsModDel] = useState(false);
   const [removedRapper, setRemovedRapper] = useState([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isGameFinished, setIsGameFinished] = useState(false);
+
+  // DA FIXARE, manca la parte che ti dice che rapper era un po' più carino;
 
   useEffect(() => {
-    const allRemovedExceptOne = removedRapper.length === RAPPERS.length - 1;
+    const allRemovedExceptOne = removedRapper.length === max - 1;
 
     if (allRemovedExceptOne) {
+      setIsGameFinished(true);
       const hasWon = !removedRapper.includes(rapperSelected.id);
 
       if (hasWon) {
@@ -28,12 +34,16 @@ export const IndovinaChiRapper = () => {
       } else {
         alert(`Hai perso! Il rapper era: ${rapperSelected.name}`);
       }
-      // reset logico del gioco
-      setRemovedRapper([]);
-      setUsedQuestions([]);
-      setResponseToQuestion("");
     }
   }, [removedRapper, rapperSelected]);
+
+
+  if (isGameFinished) {
+    // setRemovedRapper([]);
+    // setUsedQuestions([]);
+    // setResponseToQuestion("");
+  }
+
 
   const checkAnsware = (question) => {
     console.log(question);
@@ -55,6 +65,7 @@ export const IndovinaChiRapper = () => {
           setIsModDel={setIsModDel}
           removedRapper={removedRapper}
           setRemovedRapper={setRemovedRapper}
+          maxRappersBoard={max}
         />
 
         <div className="card-utility w-fit m-10">

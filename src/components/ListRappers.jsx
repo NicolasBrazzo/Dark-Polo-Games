@@ -5,10 +5,11 @@ export const ListRappers = ({
   isModDel,
   removedRapper,
   setRemovedRapper,
+  maxRappersBoard
 }) => {
   const [hoveredId, setHoveredId] = useState(null);
 
-  const max = 20;
+  const max = maxRappersBoard;
 
   const randomRappers = useMemo(() => {
     const shuffled = [...rappers];
