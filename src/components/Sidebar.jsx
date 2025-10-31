@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUp, Home, House, Menu, X } from "lucide-react";
+import { ArrowDown, ArrowUp, Home, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GAMES } from "../data/gamesData";
 import { useEffect, useState } from "react";
@@ -6,6 +6,13 @@ import { useEffect, useState } from "react";
 export const Sidebar = ({ open, setOpening }) => {
   const [sectionOpen, setSectinOpen] = useState(null);
   const game = GAMES[sectionOpen];
+
+  const avaliableGames = Object.entries(GAMES).filter(
+    ([_, game]) => !game.disabledButton
+  );
+  const upComingGames = Object.entries(GAMES).filter(
+    ([_, game]) => game.disabledButton
+  );
 
   useEffect(() => {
     console.log(sectionOpen);
@@ -49,15 +56,21 @@ export const Sidebar = ({ open, setOpening }) => {
 
       {(game.route || game.rotue) && (
         <div className="mt-6">
-          <Link
-            to={
-              Array.isArray(game.route || game.rotue)
-                ? (game.route || game.rotue)[0]
-                : game.route || game.rotue
-            }
-          >
-            <button className="btn-secondary mt-4">Gioca</button>
-          </Link>
+          {game.disabledButton ? (
+            <button className="btn-secondary mt-4 opacity-50 cursor-not-allowed" disabled>
+              In arrivo
+            </button>
+          ) : (
+            <Link
+              to={
+                Array.isArray(game.route || game.rotue)
+                  ? (game.route || game.rotue)[0]
+                  : game.route || game.rotue
+              }
+            >
+              <button className="btn-secondary mt-4">Gioca</button>
+            </Link>
+          )}
         </div>
       )}
     </>
@@ -100,38 +113,85 @@ export const Sidebar = ({ open, setOpening }) => {
         <div className="h-full overflow-y-auto pr-2">
           <Link to={"/"}>
             <div className="border flex items-center gap-3 border-slate-300/30 my-3 p-5 w-fit transition duration-300 hover:bg-slate-700 cursor-pointer">
-              <House /> <span>Torna alla Home</span>
+              <Home /> <span>Torna alla Home</span>
             </div>
           </Link>
-          {/* {content} */}
-          {Object.entries(GAMES).map(([key, game]) => (
-            <div
-              key={key}
-              className={`${
-                sectionOpen !== key && "hover:bg-slate-700"
-              } border border-slate-300/30 my-3 p-5 transition duration-300`}
-              onClick={() => {
-                if (sectionOpen === key) {
-                  setSectinOpen(null);
-                } else {
-                  setSectinOpen(key);
-                }
-              }}
-            >
-              <div
-                key={key}
-                className="flex justify-between items-center cursor-pointer"
-              >
-                <h2
-                  className={`${sectionOpen === key && "font-bold text-white"}`}
+          
+          {/* Sezione Giochi Disponibili */}
+          <div id="games-avaliable" className="my-6">
+            <h2 className="text-center mb-3 font-semibold text-gray-200">
+              Giochi Disponibili
+            </h2>
+            {avaliableGames.length === 0 ? (
+              <p className="text-gray-400 text-center text-sm">
+                ...Nessun gioco attualmente disponibile...
+              </p>
+            ) : (
+              avaliableGames.map(([key, game]) => (
+                <div
+                  key={key}
+                  className={`${
+                    sectionOpen !== key && "hover:bg-slate-700"
+                  } border border-slate-300/30 my-3 p-5 transition duration-300`}
+                  onClick={() => {
+                    if (sectionOpen === key) {
+                      setSectinOpen(null);
+                    } else {
+                      setSectinOpen(key);
+                    }
+                  }}
                 >
-                  {game.title}
-                </h2>
-                {sectionOpen === key ? <ArrowUp /> : <ArrowDown />}
-              </div>
-              {sectionOpen === key && <div>{content}</div>}
-            </div>
-          ))}
+                  <div className="flex justify-between items-center cursor-pointer">
+                    <h2
+                      className={`${sectionOpen === key && "font-bold text-white"}`}
+                    >
+                      {game.title}
+                    </h2>
+                    {sectionOpen === key ? <ArrowUp /> : <ArrowDown />}
+                  </div>
+                  {sectionOpen === key && <div>{content}</div>}
+                </div>
+              ))
+            )}
+          </div>
+
+          {/* Sezione Giochi In Arrivo */}
+          <div id="games-not-avaliable" className="my-6">
+            <h2 className="text-center mb-3 font-semibold text-gray-200">
+              In Arrivo
+            </h2>
+            {upComingGames.length === 0 ? (
+              <p className="text-gray-400 text-center text-sm">
+                ...Nessun gioco in arrivo, al momento...
+              </p>
+            ) : (
+              upComingGames.map(([key, game]) => (
+                <div
+                  key={key}
+                  className={`${
+                    sectionOpen !== key && "hover:bg-slate-700"
+                  } border border-slate-300/30 my-3 p-5 transition duration-300 opacity-65`}
+                  onClick={() => {
+                    if (sectionOpen === key) {
+                      setSectinOpen(null);
+                    } else {
+                      setSectinOpen(key);
+                    }
+                  }}
+                >
+                  <div className="flex justify-between items-center cursor-pointer">
+                    <h2
+                      className={`${sectionOpen === key && "font-bold text-white"}`}
+                    >
+                      {game.title}
+                    </h2>
+                    {sectionOpen === key ? <ArrowUp /> : <ArrowDown />}
+                  </div>
+                  {sectionOpen === key && <div>{content}</div>}
+                </div>
+              ))
+            )}
+          </div>
         </div>
       </aside>
     </>

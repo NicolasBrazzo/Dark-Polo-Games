@@ -32,4 +32,15 @@ export const GAMES = {
     ],
     disabledButton: false,
   },
+  "uwufufu-trap": {
+    title: "Uwufufu Trap",
+    subtitle:
+      "Crea la tua classifica dei tuoi trapper italiani preferiti lasciandone uno solo",
+    route: "/uwufufu",
+    rules: ["SHOUT"],
+    howTo: [
+      "da inserire"
+    ],
+    disabledButton: true,
+  },
 };

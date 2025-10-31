@@ -5,8 +5,12 @@ import { GAMES } from "../data/gamesData";
 import { Github, Instagram, Linkedin } from "lucide-react";
 
 export const Home = () => {
-  const avaliableGames = Object.entries(GAMES).filter(([_, game]) => !game.disabledButton);
-  const upComingGames = Object.entries(GAMES).filter(([_, game]) => game.disabledButton);
+  const avaliableGames = Object.entries(GAMES).filter(
+    ([_, game]) => !game.disabledButton
+  );
+  const upComingGames = Object.entries(GAMES).filter(
+    ([_, game]) => game.disabledButton
+  );
 
   return (
     <div className="relative min-h-screen bg-dark text-white p-6 overflow-hidden">
@@ -29,7 +33,9 @@ export const Home = () => {
         </h2>
 
         {avaliableGames.length === 0 ? (
-          <p className="text-muted text-center">...Nessun gioco attualmente disponibile...</p>
+          <p className="text-muted text-center">
+            ...Nessun gioco attualmente disponibile...
+          </p>
         ) : (
           <div className="flex flex-wrap justify-center items-center gap-5">
             {avaliableGames.map(([key, game]) => (
@@ -54,7 +60,9 @@ export const Home = () => {
         <h2 className="text-center mt-10 mb-5">In arrivo</h2>
 
         {upComingGames.length === 0 ? (
-          <p className="text-muted text-center">...Nessun gioco in arrivo, al momento...</p>
+          <p className="text-muted text-center">
+            ...Nessun gioco in arrivo, al momento...
+          </p>
         ) : (
           <div className="flex flex-wrap justify-center items-center gap-5">
             {upComingGames.map(([key, game]) => (
@@ -80,11 +88,18 @@ export const Home = () => {
             Seguimi sui miei canali, per vedere tutti i miei progetti futuri
           </p>
           <div className="flex justify-center items-center gap-5 my-4">
-            <a href="https://www.google.com" target="blank">
+            <a href="https://www.instagram.com/brazz0_/" target="blank">
               <Instagram />
             </a>
-            <Github />
-            <Linkedin />
+            <a href="https://github.com/NicolasBrazzo" target="blank">
+              <Github />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nicolas-brazzo-a91509286/"
+              target="blank"
+            >
+              <Linkedin />
+            </a>
           </div>
         </div>
       </div>

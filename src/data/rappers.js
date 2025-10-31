@@ -1,7 +1,3 @@
-// Dataset aggiornato: proprietà coerenti con QUESTIONS "oggettive" (true/false).
-// Espanso a 50 rapper/trapper italiani, includendo la nuova generazione
-// Rimossi duplicati (Guè/Gué Pequeno) e aggiunti artisti emergenti
-
 export const RAPPERS = [
   {
     id: 1,
@@ -27,6 +23,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap", "trap", "pop"],
   },
   {
     id: 2,
@@ -52,6 +49,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 3,
@@ -77,6 +75,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["trap", "drill", "rap"],
   },
   {
     id: 4,
@@ -102,6 +101,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: true,
     voice_distinctive: false,
+    genre: ["trap", "pop"],
   },
   {
     id: 5,
@@ -127,6 +127,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap", "trap", "pop"],
   },
   {
     id: 6,
@@ -152,6 +153,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: true,
     voice_distinctive: false,
+    genre: ["trap", "pop"],
   },
   {
     id: 7,
@@ -177,6 +179,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: false,
+    genre: ["trap", "pop", "rap"],
   },
   {
     id: 8,
@@ -202,6 +205,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["trap", "pop"],
   },
   {
     id: 9,
@@ -227,6 +231,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["trap", "rap", "pop"],
   },
   {
     id: 10,
@@ -252,6 +257,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap", "pop", "trap"],
   },
   {
     id: 11,
@@ -277,6 +283,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["trap"],
   },
   {
     id: 12,
@@ -302,6 +309,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap", "pop"],
   },
   {
     id: 13,
@@ -327,6 +335,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["trap", "drill", "rap"],
   },
   {
     id: 14,
@@ -352,6 +361,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["trap", "rap"],
   },
   {
     id: 15,
@@ -377,6 +387,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 16,
@@ -402,6 +413,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: true,
     voice_distinctive: false,
+    genre: ["trap", "rap", "pop"],
   },
   {
     id: 17,
@@ -427,6 +439,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: false,
+    genre: ["drill", "trap"],
   },
   {
     id: 18,
@@ -452,6 +465,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 19,
@@ -477,6 +491,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap", "pop"],
   },
   {
     id: 20,
@@ -502,6 +517,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: true,
     voice_distinctive: false,
+    genre: ["pop", "trap"],
   },
   {
     id: 21,
@@ -527,6 +543,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap", "pop"],
   },
   {
     id: 22,
@@ -552,6 +569,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 23,
@@ -577,6 +595,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 24,
@@ -602,6 +621,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 25,
@@ -627,6 +647,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["trap", "rap"],
   },
   {
     id: 26,
@@ -652,6 +673,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["pop", "rap"],
   },
   {
     id: 27,
@@ -677,6 +699,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: false,
+    genre: ["pop", "rap"],
   },
   {
     id: 28,
@@ -702,6 +725,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 29,
@@ -727,6 +751,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 30,
@@ -752,6 +777,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 31,
@@ -777,6 +803,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 32,
@@ -802,6 +829,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 33,
@@ -827,6 +855,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: false,
+    genre: ["pop", "rap"],
   },
   {
     id: 34,
@@ -852,6 +881,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: false,
+    genre: ["drill", "trap"],
   },
   {
     id: 35,
@@ -877,6 +907,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: true,
     voice_distinctive: false,
+    genre: ["trap", "pop"],
   },
   {
     id: 36,
@@ -902,6 +933,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: true,
     voice_distinctive: false,
+    genre: ["trap", "pop"],
   },
   {
     id: 37,
@@ -927,6 +959,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: true,
     voice_distinctive: false,
+    genre: ["trap", "rap"],
   },
   {
     id: 38,
@@ -952,6 +985,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 39,
@@ -977,6 +1011,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 40,
@@ -1002,6 +1037,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: true,
     voice_distinctive: false,
+    genre: ["trap", "pop"],
   },
   {
     id: 41,
@@ -1027,6 +1063,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 42,
@@ -1052,6 +1089,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: false,
+    genre: ["trap", "pop"],
   },
   {
     id: 43,
@@ -1077,6 +1115,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: true,
     voice_distinctive: false,
+    genre: ["trap", "pop"],
   },
   {
     id: 44,
@@ -1102,6 +1141,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["trap", "pop"],
   },
   {
     id: 45,
@@ -1127,6 +1167,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: true,
     voice_distinctive: false,
+    genre: ["trap", "pop"],
   },
   {
     id: 46,
@@ -1152,6 +1193,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 47,
@@ -1177,6 +1219,7 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap"],
   },
   {
     id: 48,
@@ -1202,6 +1245,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["rap", "pop"],
   },
   {
     id: 49,
@@ -1227,6 +1271,7 @@ export const RAPPERS = [
     rapper_singer: true,
     label_indipendente: false,
     voice_distinctive: false,
+    genre: ["trap", "rap", "pop"],
   },
   {
     id: 50,
@@ -1252,8 +1297,9 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: false,
+    genre: ["trap", "rap"],
   },
-    {
+  {
     id: 51,
     name: "Melons",
     img: "https://i.scdn.co/image/ab6761610000e5eb340ab4af0d5264450904c8d9",
@@ -1277,5 +1323,6 @@ export const RAPPERS = [
     rapper_singer: false,
     label_indipendente: false,
     voice_distinctive: true,
+    genre: ["trap", "rap"],
   },
 ];
