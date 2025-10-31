@@ -41,6 +41,6 @@ export const GAMES = {
     howTo: [
       "da inserire"
     ],
-    disabledButton: true,
+    disabledButton: false,
   },
 };

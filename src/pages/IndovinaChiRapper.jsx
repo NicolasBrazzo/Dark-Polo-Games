@@ -39,9 +39,9 @@ export const IndovinaChiRapper = () => {
 
 
   if (isGameFinished) {
-    // setRemovedRapper([]);
-    // setUsedQuestions([]);
-    // setResponseToQuestion("");
+    setRemovedRapper([]);
+    setUsedQuestions([]);
+    setResponseToQuestion("");
   }
 
 
