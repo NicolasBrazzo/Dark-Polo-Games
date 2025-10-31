@@ -16,7 +16,7 @@ export const GAMES = {
       "Vedi la risposta",
       "Elimina i rapper",
     ],
-    disabledButton: true,
+    disabledButton: false,
   },
   "indovina-anno-album": {
     title: "Indovina Anno dell'album",

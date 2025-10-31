@@ -99,10 +99,10 @@ export const Uwufufu = () => {
         ) : (
           <div className="card">
             <div className="flex items-center justify-center gap-3">
-              {players.slice(0, 2).map((elem, key) => (
-                <div key={key} onClick={() => playerSelected(elem)}>
+              {players.slice(0, 2).map((elem) => (
+                <div key={elem.id} onClick={() => playerSelected(elem)}>
                   <h1>{elem.name}</h1>
-                  <img src={elem.img} alt="" className="w-[200px]" />
+                  <img src={elem.img} alt={elem.name} className="w-[200px]" />
                 </div>
               ))}
             </div>
