@@ -19,8 +19,8 @@ export const Home = () => {
 
       <Navbar />
 
-      <div className="flex flex-col items-center">
-        <h1 className="neon-title">Dark Polo Games</h1>
+      <div className="flex flex-col items-center h-[400px] justify-center" id="home">
+        <h1 className="neon-title my-4">Dark Polo Games</h1>
         <p className="text-normal text-center">
           Benvenuto nella piattaforma dove potrai giocare con i tuoi rapperz
           preferiti
@@ -75,12 +75,12 @@ export const Home = () => {
         )}
       </div>
 
-      <div id="madeby" className="panel mt-30 mx-10 flex justify-center gap-5">
-        <div className="card flex-1">
+      <div id="madeby" className="panel mt-30 mx-10 md:flex md:justify-center md:gap-5">
+        <div className="card md:flex-1 my-4">
           <h2 className="neon-subtitle">Nicolas Brazzo</h2>
           <p>Descrizione</p>
         </div>
-        <div className="card flex-2 flex text-center flex-col justify-center">
+        <div className="card md:flex-2 my-4 flex text-center flex-col justify-center">
           <h3 className="text-2xl font-bold text-muted">
             Se vuoi saperne di più
           </h3>

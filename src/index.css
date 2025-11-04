@@ -10,6 +10,7 @@
   --neon-cyan: #00e0ff;
   --muted: #9aa4b2;
   --card-radius: 16px;
+  scroll-behavior: smooth;
 }
 
 /* BASE COLORS */
