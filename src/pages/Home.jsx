@@ -9,6 +9,7 @@ export const Home = () => {
     ([_, game]) => !game.disabledButton
   );
   const upComingGames = Object.entries(GAMES).filter(
+    
     ([_, game]) => game.disabledButton
   );
 

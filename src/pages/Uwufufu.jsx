@@ -153,7 +153,7 @@ export const Uwufufu = () => {
             </div>
           </div>
         ) : (
-          <div className="card sm:w-[60%] sm:h-[70vh] w-[80%]">
+          <div className="card sm:w-[60vw] sm:h-[70vh] w-[80%]">
             <div className="w-full">
               <h2 className="text-center neon-subtitle pb-5 text-xl">
                 Turno: {turn}

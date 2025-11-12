@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import { Home } from "./pages/Home";
 import { IndovinaChiRapper } from "./pages/IndovinaChiRapper";
 import { GuessAlbumYear } from "./pages/GuessAlbumYear";
@@ -18,5 +19,8 @@ function App() {
     </div>
   );
 }
+
+
+// <Link to={"/"} />
 
 export default App;
